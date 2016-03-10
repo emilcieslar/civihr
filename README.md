@@ -43,4 +43,5 @@ This will compile all js and scss.
   2. responsibility refinings such as margins and paddings,
   3. responsibility of roadmap needs refining,
   4. retina image support for full size cover intro image
-  5. also retina support for feature images as well.
+  5. also retina support for feature images as well,
+  6. feature images could be separated into the browser bar and css shadows.
