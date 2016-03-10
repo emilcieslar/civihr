@@ -1,0 +1,43 @@
+// ----------------------------------------------------------------------------> BORDER RADIUS
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin border-radius-all($radius, $radius2, $radius3, $radius4) {
+  -webkit-border-radius: $radius $radius2 $radius3 $radius4;
+     -moz-border-radius: $radius $radius2 $radius3 $radius4;
+      -ms-border-radius: $radius $radius2 $radius3 $radius4;
+          border-radius: $radius $radius2 $radius3 $radius4;
+}
+
+// ----------------------------------------------------------------------------> DROP SHADOW
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow:inset $top $left $blur $color;
+    -moz-box-shadow:inset $top $left $blur $color;
+    box-shadow:inset $top $left $blur $color;
+  } @else {
+    -webkit-box-shadow: $top $left $blur $color;
+    -moz-box-shadow: $top $left $blur $color;
+    box-shadow: $top $left $blur $color;
+  }
+}
+
+// ----------------------------------------------------------------------------> ROUNDED CORNERS
+@mixin rounded($radius: 0.5em) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+// ----------------------------------------------------------------------------> TRANSITION
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
