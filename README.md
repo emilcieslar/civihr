@@ -29,6 +29,8 @@ This will compile all js and scss.
 
 ## You're good to go!
 
+In settings partial in scss folder you can set the accent color by changing $primary-color variable.
+
 
 ## Notes
 
