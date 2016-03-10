@@ -50,8 +50,9 @@
 @include motion-ui-animations;
 
 @import 'mixins';
-@import 'large';
 @import 'small';
+@import 'medium';
+@import 'large';
 @import 'text';
 @import 'layout';
 @import 'buttons';

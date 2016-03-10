@@ -1,0 +1,9 @@
+// ----------------------------------------------------------------------------> STYLESHEET FOR MEDIUM AND UP SCREENS
+@include breakpoint(medium) {
+
+  // ----------------------------------------------------------------------------> TOP BAR
+  .top-bar-left,
+  .top-bar-right {
+    width: 100%;
+  }
+}

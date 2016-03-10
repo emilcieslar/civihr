@@ -1,15 +1,18 @@
+// ----------------------------------------------------------------------------> GENERAL TEXT STYLE
 .uppercase {
   text-transform: uppercase;
-}
-
-.primary-color {
-  color: $primary-color;
 }
 
 .bold {
   font-weight: $global-weight-bold;
 }
 
+// ----------------------------------------------------------------------------> TEXT COLOURS
+.primary-color {
+  color: $primary-color;
+}
+
+// ----------------------------------------------------------------------------> PARAGRAPHS
 p {
   font-size: $global-font-size - 10%;
 }
@@ -18,6 +21,12 @@ p.smaller {
   font-size: $small-font-size;
 }
 
+// ----------------------------------------------------------------------------> LISTS
 ul li {
   font-size: $global-font-size - 10%;
+}
+
+// ----------------------------------------------------------------------------> HEADINGS
+h4 {
+  padding-bottom: 10px;
 }

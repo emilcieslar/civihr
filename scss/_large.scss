@@ -43,9 +43,14 @@
   // ----------------------------------------------------------------------------> Top bar
   .top-bar {
 
+    .top-bar-left,
+    .top-bar-right {
+      width: auto;
+    }
+
     // Logo padding
     .top-bar-left li {
-      padding-top: 30px;
+      padding-top: 29px;
     }
 
     // Links on right side
@@ -95,6 +100,20 @@
 
     img {
       margin: 0;
+    }
+
+  }
+
+  // ----------------------------------------------------------------------------> ROADMAP
+  .roadmap {
+
+    .roadmap-inner {
+      padding: 20px 0 50px 100px;
+    }
+
+    // ---------------------------------------> TIMELINES
+    .timeline-up-down {
+      width: 480px;
     }
 
   }

@@ -37,3 +37,10 @@ This will compile all js and scss.
 2. Typekit fonts won't work on different domain than specified so please make sure you're viewing the site on [provided page](http://emilcieslar.github.io/civihr).
 
 3. Some parts are not refined to pixel perfect details, which is due to time constraints. My strategy was to show as much as possible to the reasonable detail.
+
+  For example:
+  1. blog and event arrows in the top bar,
+  2. responsibility refinings such as margins and paddings,
+  3. responsibility of roadmap needs refining,
+  4. retina image support for full size cover intro image
+  5. also retina support for feature images as well.

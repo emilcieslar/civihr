@@ -8,6 +8,17 @@
   .bottom-padding-#{$i*10} { padding-bottom: $i*10px !important; }
   .left-padding-#{$i*10} { padding-left: $i*10px !important; }
   .right-padding-#{$i*10} { padding-right: $i*10px !important; }
+
+  @include breakpoint(medium down) {
+    .top-medium-#{$i*10} { margin-top: $i*10px !important; }
+    .bottom-medium-#{$i*10} { margin-bottom: $i*10px !important; }
+    .right-medium-#{$i*10} { margin-right: $i*10px !important; }
+    .left-medium-#{$i*10} { margin-left: $i*10px !important; }
+    .top-medium-padding-#{$i*10} { padding-top: $i*10px !important; }
+    .bottom-medium-padding-#{$i*10} { padding-bottom: $i*10px !important; }
+    .left-medium-padding-#{$i*10} { padding-left: $i*10px !important; }
+    .right-medium-padding-#{$i*10} { padding-right: $i*10px !important; }
+  }
 }
 
 // ----------------------------------------------------------------------------> BG COLOURS
@@ -19,194 +30,7 @@
   background-color: $dark-gray;
 }
 
-
-// ----------------------------------------------------------------------------> TOP BAR
-.top-bar {
-  border-bottom: 1px solid $white;
-
-  &.no-border {
-    border-bottom: none;
-  }
-
-  li {
-    color: $white;
-    a {
-      color: $white;
-    }
-  }
-}
-
-// ----------------------------------------------------------------------------> CIRCLES
-.circle {
-  $circleHeight: 110px;
-  width: $circleHeight;
-  height: $circleHeight;
-  @include rounded(1000px);
-  border: 5px solid $light-gray;
-  cursor: pointer;
-  display: inline-block;
-  @include disable-mouse-outline;
-
-  i.fa {
-    color: $primary-color;
-    height: calc(110px - 5px*2);
-    line-height: calc(110px - 5px*2);
-  }
-
-  &:hover, &.is-active {
-    border-color: $primary-color;
-
-    i.fa {
-      color: $dark-gray;
-    }
-  }
-
-}
-
-// ----------------------------------------------------------------------------> ROADMAP
-.roadmap {
-  position: relative;
+// ----------------------------------------------------------------------------> GENERAL
+.overflow-hidden {
   overflow: hidden;
-
-  .roadmap-inner {
-    position: absolute;
-    top: 0;
-    left: 0;
-    overflow: hidden;
-    padding: 20px 0 50px 100px;
-  }
-
-  $arrowSize: 120px;
-  .roadmap-arrow {
-    position: absolute;
-    width: $arrowSize;
-    height: $arrowSize;
-    margin-top: -15px;
-    background: $white;
-    overflow: visible;
-    @include box-shadow(3px, 0px, 15px, rgba(0,0,0,.1));
-    @include rounded(1000px);
-    @include vertical-center;
-    z-index: 3;
-    display: none;
-
-    i.fa {
-      color: $primary-color;
-      height: $arrowSize;
-      line-height: $arrowSize;
-      padding-right: 30px;
-    }
-  }
-
-  .roadmap-arrow.left {
-    left: -$arrowSize;
-    text-align: right;
-  }
-
-  .roadmap-arrow.right {
-    text-align: left;
-    left: auto;
-    right: -$arrowSize/2;
-    display: block;
-
-    i.fa {
-      padding-right: 0;
-      padding-left: 30px;
-    }
-  }
-
-  // ---------------------------------------> CIRCLES
-  $circleHeightRoadmap: 155px;
-  .circle {
-    width: $circleHeightRoadmap;
-    height: $circleHeightRoadmap;
-    border: 7px solid $primary-color;
-
-    i.fa {
-      color: $dark-gray;
-      height: calc(155px - 7px*2);
-      line-height: calc(155px - 7px*2);
-    }
-  }
-
-  // ---------------------------------------> TIMELINES
-  .timeline-up-down {
-    width: 480px;
-    min-height: 30px;
-    padding: 30px;
-    overflow: visible;
-    float: left;
-    text-align: center;
-    position: relative;
-
-    &.first {
-      margin-left: 30px;
-    }
-
-    .small-circle {
-      width: 15px;
-      height: 15px;
-      background: $primary-color;
-      @include rounded(1000px);
-      @include box-shadow(0, 3px, 10px, rgba(0,0,0,.1));
-      display: inline-block;
-      @include vertical-center;
-      // horizontal alignment fix
-      margin-left: -7px;
-    }
-  }
-
-  .timeline {
-    width: 100%;
-    overflow: visible;
-    clear: both;
-    background: url(../img/timeline-light.png) left center repeat-x;
-    height: 30px;
-    position: relative;
-
-    .timeline-up-down {
-      padding: 0;
-      text-align: center;
-      position: relative;
-      z-index: 2;
-    }
-
-    .dark-line {
-      width: 100%;
-      position: absolute;
-      height: 30px;
-      top: 0;
-      left: 0;
-      background: url(../img/timeline-dark.png) left center repeat-x;
-      z-index: 1;
-      // Starting invisible
-      width: 0;
-      // Set up animation
-      @include transition(width 5s ease-in-out);
-    }
-
-    .dark-line.full {
-      width: 100%;
-    }
-
-    .start-circle {
-      $startCircleSize: 30px;
-      width: $startCircleSize;
-      height: $startCircleSize;
-      background: $primary-color;
-      @include rounded(1000px);
-      @include box-shadow(0, 3px, 10px, rgba(0,0,0,.1));
-      float: left;
-      text-align: center;
-      position: relative;
-      z-index: 2;
-
-      i.fa {
-        color: $white;
-        height: $startCircleSize;
-        line-height: $startCircleSize;
-      }
-    }
-  }
-
 }
