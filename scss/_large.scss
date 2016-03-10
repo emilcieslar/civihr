@@ -1,0 +1,97 @@
+// ----------------------------------------------------------------------------> STYLESHEET FOR LARGE AND UP SCREENS
+@include breakpoint(large) {
+
+  // ----------------------------------------------------------------------------> Homepage Intro
+  .homepage-intro {
+
+    h1 {
+      margin: 170px 0 20px 0;
+    }
+
+    p {
+      font-size: rem-calc(24);
+      margin-bottom: 30px;
+    }
+
+    form {
+      display: inline-block;
+      overflow: hidden;
+      margin-bottom: 120px;
+    }
+
+  }
+
+  // ----------------------------------------------------------------------------> Top bar wrapper
+  .top-bar-wrapper {
+    // Absolute for large and up
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  // ----------------------------------------------------------------------------> Top bar
+  .top-bar {
+
+    // transparent background for large and up
+    background: transparent;
+    ul {
+      background: transparent;
+    }
+
+    // Logo padding
+    .top-bar-left li {
+      padding-top: 30px;
+    }
+
+    // Links on right side
+    .top-bar-right li {
+      padding-top: 3px;
+      padding-bottom: 3px;
+
+      a {
+        padding-top: 1.8rem;
+        padding-bottom: 1.8rem;
+        font-size: rem-calc(13);
+        text-transform: uppercase;
+        font-weight: $global-weight-bold;
+      }
+
+      &:hover {
+        border-bottom: 3px solid $primary-color;
+        padding-bottom: 0;
+      }
+
+      // vertical separator line
+      &.sep {
+
+        padding-right: 10px;
+        padding-left: 10px;
+
+        &:hover {
+          border-bottom: 0;
+          padding-bottom: 3px;
+        }
+
+        span {
+          display: block;
+          width: 1px;
+          background: $white;
+          height: 30px;
+        }
+      }
+
+    }
+
+  }
+
+  // ----------------------------------------------------------------------------> Features imgs
+  .features-img-wrapper {
+    overflow: hidden;
+
+    img {
+      margin: 0;
+    }
+
+  }
+
+}

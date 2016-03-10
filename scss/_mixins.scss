@@ -1,0 +1,14 @@
+// ----------------------------------------------------------------------------> BORDER RADIUS
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin border-radius-all($radius, $radius2, $radius3, $radius4) {
+  -webkit-border-radius: $radius $radius2 $radius3 $radius4;
+     -moz-border-radius: $radius $radius2 $radius3 $radius4;
+      -ms-border-radius: $radius $radius2 $radius3 $radius4;
+          border-radius: $radius $radius2 $radius3 $radius4;
+}

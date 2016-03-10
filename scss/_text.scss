@@ -1,0 +1,19 @@
+.uppercase {
+  text-transform: uppercase;
+}
+
+.primary-color {
+  color: $primary-color;
+}
+
+.bold {
+  font-weight: $global-weight-bold;
+}
+
+p {
+  font-size: $global-font-size - 10%;
+}
+
+ul li {
+  font-size: $global-font-size - 10%;
+}
