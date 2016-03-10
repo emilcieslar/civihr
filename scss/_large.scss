@@ -23,20 +23,25 @@
 
   // ----------------------------------------------------------------------------> Top bar wrapper
   .top-bar-wrapper {
+
     // Absolute for large and up
-    position: absolute;
-    top: 0;
-    width: 100%;
+    &.absolute {
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+
+    // transparent background for large and up
+    &.transparent .top-bar {
+      background: transparent;
+      ul {
+        background: transparent;
+      }
+    }
   }
 
   // ----------------------------------------------------------------------------> Top bar
   .top-bar {
-
-    // transparent background for large and up
-    background: transparent;
-    ul {
-      background: transparent;
-    }
 
     // Logo padding
     .top-bar-left li {

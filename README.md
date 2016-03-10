@@ -1,48 +1,37 @@
-# Foundation for Sites Template
+# CiviHR
 
-**Please open all issues with this template on the main [Foundation for Sites](https://github.com/zurb/foundation-sites/issues) repo.**
+[Example](http://emilcieslar.github.io/civihr/)
 
-This is the basic starter project for [Foundation for Sites 6](http://foundation.zurb.com/sites). It includes a Sass compiler and a starter HTML file for you.
+***Please keep in mind that due to time constraints I have completed only chosen parts of the homepage. The choosing was based on difficulty of the part and also on how much I can show on the part.***
 
 ## Installation
 
-To use this template, your computer needs:
-
-- [NodeJS](https://nodejs.org/en/) (0.12 or greater)
-- [Git](https://git-scm.com/)
-
-This template can be installed with the Foundation CLI, or downloaded and set up manually.
-
-### Using the CLI
-
-Install the Foundation CLI with this command:
+In the project folder in CLI, run the following commands:
 
 ```bash
-npm install foundation-cli --global
-```
-
-Use this command to set up a blank Foundation for Sites project with this template:
-
-```bash
-foundation new --framework sites --template basic
-```
-
-The CLI will prompt you to give your project a name. The template will be downloaded into a folder with this name.
-
-### Manual Setup
-
-To manually set up the template, first download it with Git:
-
-```bash
-git clone https://github.com/zurb/foundation-sites-template projectname
-```
-
-Then open the folder in your command line, and install the needed dependencies:
-
-```bash
-cd projectname
-npm install
 bower install
+npm install
 ```
 
-Finally, run `npm start` to run the Sass compiler. It will re-run every time you save a Sass file.
+This will install all dependencies.
+
+## Compiling the project
+
+In the project folder in CLI, run the following command:
+```bash
+foundation watch
+```
+
+If you don't have `foundation-cli` installed, you can just run `gulp` while in the project folder in CLI.
+
+
+This will compile all js and scss.
+
+## You're good to go!
+
+
+## Notes
+
+1. You may have noticed that top-bar is absolute positioned for screen sizes large and up. I could simply place the header inside .homepage-intro section and therefore making it static. However as other parts of the site (such as Blog) don't have the .homepage-intro section with transparent top-bar over an image, programmer would not be able to reuse the top-bar into header section in a generic layout. This way a programmer can easily remove .absolute and/or .transparent classes from .top-bar-wrapper making the top-bar static and usable on other parts such as Blog. Also adding .no-border class to the .top-bar would remove the white bottom border.
+
+2. Typekit fonts won't work on different domain than specified so please make sure you're viewing the site on [provided page](http://emilcieslar.github.io/civihr).

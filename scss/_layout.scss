@@ -15,10 +15,18 @@
   background-color: $very-light-gray;
 }
 
+.bg-dark-gray {
+  background-color: $dark-gray;
+}
+
 
 // ----------------------------------------------------------------------------> TOP BAR
 .top-bar {
   border-bottom: 1px solid $white;
+
+  &.no-border {
+    border-bottom: none;
+  }
 
   li {
     color: $white;

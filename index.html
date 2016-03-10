@@ -18,22 +18,26 @@
   </head>
   <body>
 
+    <!-- ########################################################################### TITLE BAR (MEDIUM DOWN SCREENS) -->
     <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="large">
 			<button class="menu-icon" type="button" data-toggle></button>
 			<div class="title-bar-title">CiviHR</div>
 		</div>
 
-    <div class="row expanded top-bar-wrapper">
+    <!-- ########################################################################### TOP BAR (LARGE UP SCREENS) -->
+    <div class="row expanded top-bar-wrapper absolute transparent">
       <div class="row">
 
         <div class="top-bar" id="main-menu">
 
+          <!-- #################################### LEFT SIDE -->
     		  <div class="top-bar-left">
     		    <ul class="menu">
     		      <li class="menu-text"><img src="img/logo.png" alt="CiviHR" data-interchange="[img/logo@2x.png, (retina)]" /></li>
     		    </ul>
     		  </div>
 
+          <!-- #################################### RIGHT SIDE -->
     		  <div class="top-bar-right">
     		    <ul class="menu">
     					<li><a href="#">Features</a></li>
@@ -49,7 +53,8 @@
     		</div><!-- top-bar -->
 
       </div><!-- row -->
-    </div><!-- row expanded -->
+    </div><!-- row expanded top-bar-wrapper -->
+
 
     <!-- ########################################################################### HOMEPAGE INTRO -->
     <div class="row expanded homepage-intro">
