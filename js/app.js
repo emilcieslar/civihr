@@ -70,20 +70,38 @@ $(document).ready(function() {
   var moveRoadmapInner = function(side) {
 
     // Calculate the px that the roadmap-inner should be moved by
+        // The width of the whole wrapper, in this case it's basically window's width
     var wrapperWidth = parseInt($('.roadmap-wrapper').outerWidth(true)),
+        // How much is the .roadmap-inner div moved to the left
+        // We need a positive value thus using .abs()
         leftSide = Math.abs(parseInt($('.roadmap-inner').css('left'))),
+        // The .roadmap-inner's outerWidth - .roadmap-inner is basically 
+        // wider than the page and we're moving with it to left or right so we
+        // must know it's width with its margins as well
         innerWidth = $('.roadmap-inner').outerWidth(true),
+        // The rest of the .roadmap-inner that is to be scrolled to the right
         innerRest = innerWidth - (wrapperWidth + leftSide),
         moveBy = 0;
 
     if(side === "left") {
+      // If we want to scroll to the left side, we are basically moving the 
+      // .roadmap-inner to the right so we first have to check if the
+      // left side is smaller than wrapperWidth and if it is, we want to move 
+      // .roadmap-inner just by the leftSide value, otherwise we can move it
+      // by wrapperWidth value
       moveBy = wrapperWidth > leftSide ? leftSide : wrapperWidth;
     } else {
+      // Here we have exact opposite, if we want to scroll to the right side,
+      // we are basically moving the .roadmap-inner to the left side. First we
+      // have to check if there's enough .roadmap-inner to be scrolled by
+      // checking if it's smaller than wrapperWidth. If it's smaller, we just
+      // want to move it by the innerRest value. If it's bigger, we can move
+      // it by the wrapperWidth
       moveBy = wrapperWidth > innerRest ? innerRest : wrapperWidth;
     }
 
     // If moveBy is smaller than wrapperWidth, we don't want to move on
-    // so we hide the arrow accordingly
+    // after this move so we hide the arrow accordingly
     if(moveBy < wrapperWidth) {
       $('.roadmap-arrow.' + side).removeClass('visible');
     }
